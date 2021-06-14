@@ -11,8 +11,8 @@ reddit_client = Reddit()
 
 
 for sub in ("hentai", "animetitties", "ecchi", "pantsu"):
-    print("fetching from", sub)
     posts = reddit_client.top(sub)
+
     for post in (x["data"] for x in posts["data"]["children"]):
         permalink =  constants.REDDIT_URL + post["permalink"]
         if image_url := reddit_utils.find_image(post):
