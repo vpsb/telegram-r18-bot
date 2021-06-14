@@ -1,0 +1,7 @@
+# Secrets
+/.env
+
+# Dev environment
+/.vscode/**
+/venv/**
+**/__pycache__/**
